@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import telebot
 bot = telebot. TeleBot('6839894064:AAEPq1qi46vGNMyM3OEY-6kVkksGJT2MDaE')
 @bot. message_handler(commands=['start'])
