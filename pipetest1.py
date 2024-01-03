@@ -1,15 +1,15 @@
 import telebot
 from telebot import types
-
+#обращаемся к библиотеке telebot и классу Telebot
 bot = telebot.TeleBot('6667238480:AAH_nmJviJIgJhnp2574Z9I_3InrPXejcTE')
 
-@bot.message_handler(commands=['start'])
+@bot.message_handler(commands=['start']) #декоратор функции
 def start(message):
 
     markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
     btn1 = types.KeyboardButton("👋 Поздороваться")
     markup.add(btn1)
-    bot.send_message(message.from_user.id, "👋 Привет! Я твой бот-помошник!", reply_markup=markup)
+    bot.send_message(message.from_user.id, "👋 Привет! Я бот технохламщик!", reply_markup=markup)
 
 @bot.message_handler(content_types=['text'])
 def get_text_messages(message):
@@ -34,4 +34,3 @@ def get_text_messages(message):
 
 
 bot.polling(none_stop=True, interval=0) #обязательная для работы бота часть
-"""sjfhsadjfljadf"""
