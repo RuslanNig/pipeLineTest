@@ -2,7 +2,7 @@
 import telebot
 from random import randint
 import xml.etree.ElementTree as ET
-ALLSTRING_CONSTANT = 31102
+ALLSTRING_CONSTANT = 31102 #quantity of all strings
 
 xml_data = open("data/biblrus.xml", 'r').read()  # Read file
 root = ET.XML(xml_data)  # Parse XML, при принте выводит <Element 'XMLBIBLE' at 0x7f1944625b80>
@@ -28,4 +28,4 @@ def main (message):
             sentence = elem.text
         stringNumber+=1
     bot. send_message (message.chat.id,sentence)
-bot.polling(none_stop=True)
+bot.polling(none_stop=True) #polling translate as опрос
